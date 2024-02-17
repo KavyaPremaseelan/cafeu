@@ -1,0 +1,591 @@
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    list-style: none;
+    text-align: none;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+header
+{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10%;
+}
+
+.logo img
+{
+    max-width: 140px;
+    height: auto;
+}
+
+.navmenu
+{
+    display: flex;
+}
+
+.navmenu a{
+    padding: 10px;
+    color: black;
+    text-transform: capitalize;
+    font-weight: 500;
+    transition: all .42s ease;
+}
+
+.navmenu a:hover{
+    color: brown;
+}
+
+.nav-icon
+{
+    display: flex;
+    align-items: center;
+}
+
+.nav-icon .btn
+{
+    display: inline-block;
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 500;
+    border: 2px solid brown;
+    padding: 10px 30px;
+    background-color: brown;
+    border-radius: 30px;
+    color: white;
+    letter-spacing: 1px;
+    margin-right: 15px;
+    transition: all .42s ease;
+}
+
+.nav-icon .btn:hover
+{
+    transform: scale(1.1);
+}
+
+#menu-icon
+{
+    font-size: 35px;
+    color: black;
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}
+
+section
+{
+    padding: 60px 12%;
+}
+
+.home
+{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/banner-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+.home-img
+{
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
+.home-text h4{
+    color: brown;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    font-family: 'Lobster',cursive;
+}
+
+.home-text h1{
+    font-size: 50px;
+    color: black;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 23px 0;
+}
+
+.home-text h1 span{
+    color: brown;
+}
+
+.home-text p{
+    color: gray;
+    font-size: 15px;
+    line-height: 25px;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+.main-btn
+{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-btn .btn1
+{
+    display: inline-block;
+    color: white;
+    font-size: 15px;
+    text-transform: capitalize;
+    background-color: brown;
+    padding: 12px 30px;
+    transition: all .42s ease;
+}
+
+.main-btn .btn1:hover{
+    background-color: black;
+}
+
+.btn2
+{
+    font-size: 15px;
+    font-weight: 500;
+    color: black;
+    display: inline-flex;
+    justify-content: center;
+    margin-left: 30px;
+}
+
+.btn2 span i{
+    height: 50px;
+    width: 50px;
+    background: brown;
+    color: white;
+    font-size: 40px;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 15px;
+    padding: 5px;
+    transition: all .42s ease;
+}
+
+.btn2 span i:hover{
+    transform: translateY(-5px);
+}
+
+
+.menu {
+    background-image: url(images/banner-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 60px 12%;
+}
+
+/* /* Define margin for section titles in the menu */
+.menu .section-title {
+    color: brown;
+    margin-bottom: 40px;
+}
+
+/* Define margin for grid lists in the menu */
+.menu .grid-list {
+    margin-bottom: 50px;
+}
+
+/* Define styles for menu cards */
+.menu-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+/* Define styles for card banners on hover */
+.hover-card .card-banner {
+    background-color: gold; /* Change to the desired gold color */
+}
+
+/* Define transition effect for card banners on hover */
+.hover-card .card-banner .img-cover {
+    transition: 0.2s; /* Change to desired transition duration */
+}
+
+/* Define styles for card banners on hover or focus */
+.hover-card:hover .card-banner .img-cover,
+.hover-card:focus-within .card-banner .img-cover {
+    opacity: 0.7;
+    transform: scale(1.05);
+}
+
+/* Define styles for card banners */
+.menu-card .card-banner {
+    flex-shrink: 0;
+    border-radius: 24px; /* Change to desired border radius */
+}
+
+/* Define transition effect for card titles */
+.menu-card .card-title {
+    color: brown;
+    transition: 0.1s; /* Change to desired transition duration */
+}
+
+/* Define styles for card titles on hover or focus */
+.menu-card:hover .card-title,
+.menu-card:focus-visible .card-title {
+    color: black; /* Change to desired gold color */
+}
+
+/* Define styles for badges on menu cards */
+.menu-card .badge {
+    background-color: brown; /* Change to desired gold color */
+    color: white; /* Change to desired text color */
+    font-family: Arial, sans-serif; /* Change to desired font family */
+    max-width: max-content;
+    line-height: 1.5; /* Change to desired line height */
+    text-transform: uppercase;
+    padding: 5px 10px; /* Adjust padding as needed */
+    margin-top: 10px;
+    border: black 2px solid;
+}
+
+/* Define styles for card text on menu cards */
+.menu-card .card-text {
+    color: golden; /* Change to desired gold color */
+    margin-block: 10px; /* Change to desired margin */
+}
+
+/* Define styles for other card text on menu cards */
+.menu-card .card-text {
+    color: gray; /* Change to desired silver color */
+    line-height: 1.5; /* Change to desired line height */
+}
+
+/* Define styles for spans within menu text */
+.menu-text .span {
+    display: inline-block;
+    color: black; /* Change to desired gold color */
+}
+
+.sub-btn
+{
+    text-decoration: none;
+    color: white;
+    background-color: brown;
+    border-color: brown;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.sub-btn:hover{
+    background-color: black;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid brown;
+    border-radius: 5px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.row{
+    border: 1px solid brown;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2em 1em;
+    text-align: center;
+}
+
+.column
+{
+    width: 100%;
+    border: 1px solid black;
+    padding: 0.5em 0;
+}
+
+h1
+{
+    text-align: center;
+    color: brown;
+    width: 100%;
+    border: none;
+    font-size: 3.5rem;
+}
+
+.card{
+    box-shadow:0 0 0.2em rgba(25,0,58,0.15);
+    padding: 3.5em 1em;
+    border-radius: 0.6em;
+    color: black;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card .img-container
+{
+    width:8em;
+    height:8em;
+    background-color: brown;
+    padding: 0.5 em;
+    border-radius: 50%;
+    margin: 0 auto 2em;
+}
+
+.card img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+.card h3{
+    font-weight: 500;
+}
+
+.card p{
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 0.5em 0.2em 0;
+    letter-spacing: 2px;
+}
+
+.icons
+{
+    width: 50%;
+    min-width: 180px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card
+{
+    color: inherit;
+    font-size: 1.4em;
+}
+
+.card:hover{
+    background: linear-gradient(rgb(215, 117, 117),rgb(241, 184, 184));
+    color: white;
+}
+
+.about,
+.menu,
+.team,
+.contact {
+    background-image: url(images/banner-bg.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.about {
+    padding: 60px 12%;
+}
+
+.about h2 {
+    font-size: 36px;
+    color: brown;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.about p {
+    font-size: 18px;
+    color: #666;
+    text-align: center;
+}
+
+/* .menu { 
+    padding: 60px 12%;
+}
+
+.menu h2 {
+    font-size: 36px;
+    color: brown;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.menu p {
+    font-size: 18px;
+    color: #666;
+    text-align: center;
+}  */
+
+.team {
+    padding: 60px 12%;
+}
+
+.team h2 {
+    font-size: 36px;
+    color: brown;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.team p {
+    font-size: 18px;
+    color: #666;
+    text-align: center;
+}
+
+.contact {
+    padding: 60px 12%;
+}
+
+.contact h2 {
+    font-size: 36px;
+    color: brown;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.contact p {
+    font-size: 18px;
+    color: #666;
+    text-align: center;
+}
+
+.form
+{
+    text-align: center;
+}
+
+/* Responsive Design */
+@media(max-width:945px)
+{
+    header
+    {
+        padding: 20px 3%;
+        transition: .3s;
+    }
+}
+
+@media(max-width:1140px)
+{
+    .home
+    {
+        grid-template-columns: 1fr;
+        height: 100%;
+    }
+    header.sticky{
+        background: white;
+        padding: 10px 3%;
+        box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+    }
+    .home-text{
+        padding-top: 50px;
+        text-align:center;
+    }
+    section
+    {
+        padding: 90px 3%;
+    }
+    .home-img img
+    {
+        width: 100%;
+        max-width: 600px;
+    }
+    .home-img
+    {
+        text-align: center;
+    }
+}
+
+@media(max-width:855px)
+{
+    #menu-icon
+    {
+        display: block;
+    }
+    .navmenu
+    {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 300px;
+        height: 400px;
+        background-color: brown;
+        border: black 5px solid;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 90px 30px;
+        transition: all .42s ease;
+    }
+    .navmenu a
+    {
+        display: block;
+        margin: 5px 5px;
+        transition: all .42 ease;
+    }
+    .navmenu a:hover
+    {
+        color: white;
+        transform: translateX(-5px);
+        border: white 2px solid;
+    }
+    .navmenu.open
+    {
+        right: 0;
+    }
+}
+
+@media (max-width: 1140px) {
+    .about,
+    .menu,
+    .team,
+    .contact {
+        padding: 90px 3%;
+    }
+}
+
+@media (max-width: 855px) {
+    .about,
+    .menu,
+    .team,
+    .contact {
+        padding: 60px 3%;
+    }
+}
+
+@media (max-width: 600px) {
+    .about h2,
+    .menu h2,
+    .team h2,
+    .contact h2,
+    .about p,
+    .menu p,
+    .team p,
+    .contact p {
+        text-align: center;
+    }
+}
